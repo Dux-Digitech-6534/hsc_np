@@ -1,0 +1,230 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{house_owner_name}",
+ "creation": "2026-02-27 12:10:36.464786",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "project",
+  "zone_name",
+  "village_name",
+  "khirak_name",
+  "house_owner_name",
+  "samagra_id",
+  "aadhar_number",
+  "mdpe_pipemtr",
+  "electrofusion_saddle",
+  "brass_ferrule",
+  "int_kfob",
+  "fta_l_type",
+  "gi_socket",
+  "gi_elbow",
+  "gi_nipple_nine",
+  "gi_nipple_thirty",
+  "tap",
+  "jointer",
+  "column_break_yqro",
+  "mobile_no",
+  "samagra_photo",
+  "aadhar_photo",
+  "connection_photo",
+  "house_photo",
+  "capture_location",
+  "latitude",
+  "longitude"
+ ],
+ "fields": [
+  {
+   "default": "MPJNM - NP - II",
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Site Project"
+  },
+  {
+   "fieldname": "zone_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Zone Name",
+   "options": "Zone Details NP-ll",
+   "reqd": 1
+  },
+  {
+   "fieldname": "village_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Village Name",
+   "options": "Village Details NP-ll",
+   "reqd": 1
+  },
+  {
+   "fieldname": "house_owner_name",
+   "fieldtype": "Data",
+   "label": "House Owner Name"
+  },
+  {
+   "fieldname": "samagra_id",
+   "fieldtype": "Data",
+   "label": "Samagra ID",
+   "length": 10
+  },
+  {
+   "fieldname": "aadhar_number",
+   "fieldtype": "Data",
+   "label": "Aadhar Number"
+  },
+  {
+   "fieldname": "mdpe_pipemtr",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "MDPE Pipe(mtr)",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No"
+  },
+  {
+   "fieldname": "samagra_photo",
+   "fieldtype": "Attach",
+   "label": "Samagra photo"
+  },
+  {
+   "fieldname": "aadhar_photo",
+   "fieldtype": "Attach",
+   "label": "Aadhar photo"
+  },
+  {
+   "fieldname": "connection_photo",
+   "fieldtype": "Attach",
+   "label": "Connection Photo"
+  },
+  {
+   "fieldname": "capture_location",
+   "fieldtype": "Button",
+   "label": "Capture Location"
+  },
+  {
+   "fieldname": "house_photo",
+   "fieldtype": "Attach",
+   "label": "House Photo"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_yqro",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "label": "Latitude",
+   "reqd": 1
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "label": "Longitude",
+   "reqd": 1
+  },
+  {
+   "fieldname": "electrofusion_saddle",
+   "fieldtype": "Select",
+   "label": "ElectroFusion Saddle",
+   "options": "\n90MM\n110MM\n125MM\n160MM"
+  },
+  {
+   "fieldname": "brass_ferrule",
+   "fieldtype": "Int",
+   "label": "Brass Ferrule"
+  },
+  {
+   "fieldname": "int_kfob",
+   "fieldtype": "Int",
+   "label": "FTA I Type",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "fta_l_type",
+   "fieldtype": "Int",
+   "label": "FTA L Type"
+  },
+  {
+   "fieldname": "gi_socket",
+   "fieldtype": "Int",
+   "label": "GI Socket",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "gi_elbow",
+   "fieldtype": "Int",
+   "label": "GI Elbow",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "tap",
+   "fieldtype": "Int",
+   "label": "Tap",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "jointer",
+   "fieldtype": "Int",
+   "label": "Jointer",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "khirak_name",
+   "fieldtype": "Link",
+   "label": "Khirak Name",
+   "options": "Khirak Village NP-ll"
+  },
+  {
+   "fieldname": "gi_nipple_thirty",
+   "fieldtype": "Int",
+   "label": "GI Nipple 30 Inch",
+   "options": "\n30Inch\n9Inch"
+  },
+  {
+   "fieldname": "gi_nipple_nine",
+   "fieldtype": "Int",
+   "label": "GI Nipple 9 Inch"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-03 12:19:12.589035",
+ "modified_by": "Administrator",
+ "module": "HSC NP",
+ "name": "HSC Inhouse NP-ll",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

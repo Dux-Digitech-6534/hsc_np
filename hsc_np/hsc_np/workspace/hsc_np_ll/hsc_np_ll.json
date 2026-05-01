@@ -1,0 +1,116 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"Bc_XdNR8xP\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">HSC NP-ll</span>\",\"col\":12}},{\"id\":\"816pI4ckG-\",\"type\":\"card\",\"data\":{\"card_name\":\"Data Entry\",\"col\":4}},{\"id\":\"2QLSjCyFa9\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"85w1YZb2_9\",\"type\":\"card\",\"data\":{\"card_name\":\"Report\",\"col\":4}}]",
+ "creation": "2026-02-27 19:41:10.983656",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "idx": 3,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "HSC NP-ll",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Report",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "HSC Inhouse NP-ll Report",
+   "link_count": 0,
+   "link_to": "HSCN NP ll Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Data Entry",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "HSC NP-ll Details",
+   "link_count": 0,
+   "link_to": "HSC Inhouse NP-ll",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Settings",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Project Details List",
+   "link_count": 0,
+   "link_to": "Project NP-ll",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Zone Details List",
+   "link_count": 0,
+   "link_to": "Zone Details NP-ll",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Village Details List",
+   "link_count": 0,
+   "link_to": "Village Details NP-ll",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Khirak Village Details List",
+   "link_count": 0,
+   "link_to": "Khirak Village NP-ll",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-04-15 14:26:25.786480",
+ "modified_by": "Administrator",
+ "module": "HSC NP",
+ "name": "HSC NP-ll",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 28.0,
+ "shortcuts": [],
+ "title": "HSC NP-ll"
+}
