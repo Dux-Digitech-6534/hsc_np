@@ -6,6 +6,8 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "consumer_details_tab",
+  "company",
   "date",
   "project",
   "zone_name",
@@ -27,17 +29,21 @@
   "jointer",
   "column_break_yqro",
   "mobile_no",
+  "hdi_contractor_name",
   "samagra_photo",
   "aadhar_photo",
   "connection_photo",
   "house_photo",
   "capture_location",
   "latitude",
-  "longitude"
+  "longitude",
+  "amended_from",
+  "tab_2_tab",
+  "erp_connection_section",
+  "material_issue"
  ],
  "fields": [
   {
-   "default": "MPJNM - NP - II",
    "fieldname": "project",
    "fieldtype": "Link",
    "label": "Project",
@@ -139,7 +145,7 @@
    "fieldname": "electrofusion_saddle",
    "fieldtype": "Select",
    "label": "ElectroFusion Saddle",
-   "options": "\n90MM\n110MM\n125MM\n160MM"
+   "options": "\nElectroFusion Saddle 90MM\nElectroFusion Saddle 110MM\nElectroFusion Saddle 125MM\nElectroFusion Saddle 160MM"
   },
   {
    "fieldname": "brass_ferrule",
@@ -197,16 +203,60 @@
    "fieldname": "gi_nipple_nine",
    "fieldtype": "Int",
    "label": "GI Nipple 9 Inch"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "HSC Inhouse NP-ll",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "tab_2_tab",
+   "fieldtype": "Tab Break",
+   "label": "ERP Connection"
+  },
+  {
+   "fieldname": "erp_connection_section",
+   "fieldtype": "Section Break",
+   "label": "ERP Connection"
+  },
+  {
+   "fieldname": "material_issue",
+   "fieldtype": "Link",
+   "label": "Material Issue",
+   "options": "Stock Entry"
+  },
+  {
+   "fieldname": "consumer_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Consumer Details"
+  },
+  {
+   "fieldname": "hdi_contractor_name",
+   "fieldtype": "Link",
+   "label": "Contractor Name",
+   "options": "Contractor at Project"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2026-03-03 12:19:12.589035",
+ "modified": "2026-05-05 11:13:28.054379",
  "modified_by": "Administrator",
  "module": "HSC NP",
  "name": "HSC Inhouse NP-ll",
- "naming_rule": "Expression",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
