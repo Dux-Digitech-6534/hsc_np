@@ -30,11 +30,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-27 13:57:30.127335",
+ "modified": "2026-05-07 14:35:47.034988",
  "modified_by": "Administrator",
  "module": "HSC NP",
  "name": "Zone Details NP-ll",
- "naming_rule": "Expression",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
@@ -54,5 +54,6 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }
