@@ -74,12 +74,13 @@
    "fieldname": "samagra_id",
    "fieldtype": "Data",
    "label": "Samagra ID",
-   "length": 10
+   "length": 9
   },
   {
    "fieldname": "aadhar_number",
    "fieldtype": "Data",
-   "label": "Aadhar Number"
+   "label": "Aadhar Number",
+   "length": 12
   },
   {
    "fieldname": "mdpe_pipemtr",
@@ -92,7 +93,8 @@
   {
    "fieldname": "mobile_no",
    "fieldtype": "Data",
-   "label": "Mobile No"
+   "label": "Mobile No",
+   "length": 10
   },
   {
    "fieldname": "samagra_photo",
@@ -133,12 +135,14 @@
    "fieldname": "latitude",
    "fieldtype": "Float",
    "label": "Latitude",
+   "read_only": 1,
    "reqd": 1
   },
   {
    "fieldname": "longitude",
    "fieldtype": "Float",
    "label": "Longitude",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -221,6 +225,7 @@
    "options": "Company"
   },
   {
+   "depends_on": "eval:doc.docstatus == 1",
    "fieldname": "tab_2_tab",
    "fieldtype": "Tab Break",
    "label": "ERP Connection"
@@ -252,7 +257,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-05-05 11:13:28.054379",
+ "modified": "2026-05-18 13:54:14.593343",
  "modified_by": "Administrator",
  "module": "HSC NP",
  "name": "HSC Inhouse NP-ll",
