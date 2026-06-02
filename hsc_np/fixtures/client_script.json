@@ -1,0 +1,24 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "HSC Inhouse NP-ll",
+  "enabled": 1,
+  "modified": "2026-05-15 15:25:35.918090",
+  "module": "HSC NP",
+  "name": "capture location",
+  "script": "\n\nfrappe.ui.form.on('HSC Inhouse NP-ll', {\n\n    onload(frm) {\n        // hide only if not captured\n        if (!frm.doc.latitude && !frm.doc.longitude) {\n            frm.toggle_display('latitude', false);\n            frm.toggle_display('longitude', false);\n        } else {\n            frm.toggle_display('latitude', true);\n            frm.toggle_display('longitude', true);\n        }\n    },\n\n    refresh(frm) {\n        // keep visible if already saved\n        if (frm.doc.latitude && frm.doc.longitude) {\n            frm.toggle_display('latitude', true);\n            frm.toggle_display('longitude', true);\n        }\n    },\n\n    capture_location(frm) {\n\n        if (!navigator.geolocation) {\n            frappe.msgprint(__('Browser does not support location'));\n            return;\n        }\n\n        frappe.dom.freeze(__('Fetching location...'));\n\n        navigator.geolocation.getCurrentPosition(\n            function (position) {\n\n                frappe.dom.unfreeze();\n\n                frm.set_value('latitude', position.coords.latitude);\n                frm.set_value('longitude', position.coords.longitude);\n\n                // show fields\n                frm.toggle_display('latitude', true);\n                frm.toggle_display('longitude', true);\n\n                frappe.msgprint(__('Location captured successfully'));\n            },\n            function () {\n                frappe.dom.unfreeze();\n                frappe.msgprint(__('Please allow location access'));\n            },\n            {\n                enableHighAccuracy: true,\n                timeout: 10000\n            }\n        );\n    }\n\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "HSC Inhouse NP-ll",
+  "enabled": 1,
+  "modified": "2026-05-18 14:25:54.974990",
+  "module": "HSC NP",
+  "name": "Mob,Aadhar lengh (limit)",
+  "script": "frappe.ui.form.on(\"HSC Inhouse NP-II\", {\r\n    refresh: function(frm) {\r\n        validate_all_id_fields(frm);\r\n    },\r\n\r\n    mobile_no: function(frm) {\r\n        validate_digit_field(frm, \"mobile_no\", 10);\r\n    },\r\n\r\n    samagra_id: function(frm) {\r\n        validate_digit_field(frm, \"samagra_id\", 9);\r\n    },\r\n\r\n    aadhar_number: function(frm) {\r\n        validate_digit_field(frm, \"aadhar_number\", 12);\r\n    },\r\n\r\n    validate: function(frm) {\r\n        validate_all_id_fields(frm);\r\n\r\n        if (!is_valid_digit_field(frm, \"mobile_no\", 10)) {\r\n            frappe.throw(\"Mobile No exactly 10 digit ka hona chahiye\");\r\n        }\r\n\r\n        if (!is_valid_digit_field(frm, \"samagra_id\", 9)) {\r\n            frappe.throw(\"Samagra ID exactly 9 digit ka hona chahiye\");\r\n        }\r\n\r\n        if (!is_valid_digit_field(frm, \"aadhar_number\", 12)) {\r\n            frappe.throw(\"Aadhar Number exactly 12 digit ka hona chahiye\");\r\n        }\r\n    }\r\n});\r\n\r\nfunction validate_all_id_fields(frm) {\r\n    validate_digit_field(frm, \"mobile_no\", 10);\r\n    validate_digit_field(frm, \"samagra_id\", 9);\r\n    validate_digit_field(frm, \"aadhar_number\", 12);\r\n}\r\n\r\nfunction validate_digit_field(frm, fieldname, exact_length) {\r\n    let value = frm.doc[fieldname];\r\n\r\n    if (!frm.fields_dict[fieldname]) {\r\n        return;\r\n    }\r\n\r\n    let input = frm.fields_dict[fieldname].$input;\r\n\r\n    if (!input) {\r\n        return;\r\n    }\r\n\r\n    if (!value) {\r\n        input.css({\r\n            \"border\": \"\",\r\n            \"background-color\": \"\"\r\n        });\r\n        return;\r\n    }\r\n\r\n    value = String(value).trim();\r\n\r\n    if (!/^[0-9]+$/.test(value) || value.length !== exact_length) {\r\n        input.css({\r\n            \"border\": \"2px solid red\",\r\n            \"background-color\": \"#ffe6e6\"\r\n        });\r\n    } else {\r\n        input.css({\r\n            \"border\": \"\",\r\n            \"background-color\": \"\"\r\n        });\r\n    }\r\n}\r\n\r\nfunction is_valid_digit_field(frm, fieldname, exact_length) {\r\n    let value = frm.doc[fieldname];\r\n\r\n    if (!value) {\r\n        return true;\r\n    }\r\n\r\n    value = String(value).trim();\r\n\r\n    return /^[0-9]+$/.test(value) && value.length === exact_length;\r\n}",
+  "view": "Form"
+ }
+]

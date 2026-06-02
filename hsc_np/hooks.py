@@ -247,3 +247,38 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+
+fixtures = [
+    {
+        "dt": "Custom Field",
+        "filters": [["module", "=", "Hsc Np"]]
+    },
+    {
+        "dt": "Property Setter",
+        "filters": [["module", "=", "Hsc Np"]]
+    },
+    {
+        "dt": "Client Script",
+        "filters": [["module", "=", "Hsc Np"]]
+    },
+    {
+        "dt": "Server Script",
+        "filters": [["module", "=", "Hsc Np"]]
+    },
+    {
+        "dt": "Workflow",
+        "filters": [["module", "=", "Hsc Np"]]
+    },
+    {
+        "dt": "Workflow Action",
+        "filters": [["module", "=", "Hsc Np"]]
+    },
+    {
+        "dt": "Workflow State",
+        "filters": [["module", "=", "Hsc Np"]]
+    },
+    {
+        "dt": "Workspace",
+        "filters": [["module", "=", "Hsc Np"]]
+    }
+]
